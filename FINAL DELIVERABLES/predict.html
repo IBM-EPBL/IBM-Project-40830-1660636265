@@ -1,0 +1,271 @@
+
+
+<html>
+    <head>
+      <title>PREDICTION</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'montserrat',sans-serif ;
+            }            
+            body{
+                
+                padding: 0px 10px;
+                background-size: cover;
+            }
+            .container{
+                max-width: 500px;
+                width: 100%;
+                background: transparent;
+                margin: 20px auto;
+                padding: 30px;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+            }
+            .container .title{
+                font-size: 25px;
+                font-weight: 1000px;
+                margin-bottom: 25px;
+                color: red;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .container .form{
+                width: 100%;
+            }
+
+            .container .form .input_field{
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            }
+            .container .form .input_field label{
+                width: 200px;
+                margin-right: 10px;
+                font-size: 14px;
+
+            }
+            .container .form .input_field .input,
+            .container .form .input_field .textarea{
+                width: 100%;
+                outline: none;
+                border: 1px solid #d5d5d5;
+                font-size: 10px;
+                padding: 8px 10px;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+
+            .container .form .input_field .textarea{
+                resize: none;
+                height: 90px;
+
+            }
+            .container .form .input_field .custom_radio{
+                position: relative;
+                
+                width: 100%;
+            }
+
+            .container .form .input_field .input:focus,
+            .container .form .input_field .textarea:focus,
+            .container .form .input_field select:focus{
+                border: 1px solid #fec107;
+
+            }
+            #next{
+                border-radius : 100px;
+                padding: 10px 15px;
+                background: rgb(40, 24, 252);
+                border: none;
+                outline: none;
+                color: white;
+                margin-top: 15px;
+
+            }
+            #next:hover{
+                background-color: rgb(12, 221, 221);
+                cursor: pointer;
+                color: black;
+            }
+
+            
+            #reset{
+                border-radius : 60px;
+                padding: 10px 15px;
+                background: rgb(40, 24, 252);
+                width: 70%;
+                border: none;
+                outline: none;
+                color: white;
+                margin-top: 25px;
+                margin-left: 100px;
+
+            }
+            #reset:hover{
+                background-color: rgb(16, 247, 47);
+                cursor: pointer;
+                color: black;
+            }
+
+
+            @media (max-width:420px){
+                .container .form .input_field{
+                flex-direction: column;
+                align-items: flex-start;
+                }
+                .container .form .input_field{
+                    margin-bottom: 5px;
+                }
+            }
+
+        </style>     
+        <div class="container">
+            <div class ="title">
+                PREDICTION
+            </div>
+            <form method="POST" action="{{ url_for('result')}}">
+                <div class="form">
+                    <div class="input_field">
+                        <label>having_IPhaving_IP_Address</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="having_IPhaving_IP_Address"required>
+                    </div>
+                    
+                    <div class="input_field">
+                        <label>URLURL_Length </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="URLURL_Length"required>
+                    </div>
+                    
+                    <div class="input_field">
+                        <label>Shortining_Service</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Shortining_Service"required>
+                    </div>              
+                    
+                    <div class="input_field">
+                        <label>having_At_symbol</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="having_At_symbol"required>
+                    </div>
+                    
+                    <div class="input_field">
+                        <label>double_slash_redirecting</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="double_slash_redirecting"required>
+                    </div>
+    
+                    <div class="input_field">
+                        <label>Prefix_Suffix </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Prefix_Suffix"required>
+                    </div>
+    
+                    <div class="input_field">
+                        <label>having_Sub_Domain </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="having_Sub_Domain"required>
+                    </div>
+    
+                    <div class="input_field">
+                        <label>SSLfinal_State</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="SSLfinal_State"required>
+                    </div> 
+                  
+                    <div class="input_field">
+                        <label>Domain_registeration_length </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Domain_registeration_length"required>
+                    </div>
+    
+                    <div class="input_field">
+                        <label>Favicon </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Favicon"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Port </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Port"required>
+                    </div>
+                    <div class="input_field">
+                        <label>HTTPS_token </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="HTTPS_token"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Request_URL</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Request_URL"required>
+                    </div>
+                    <div class="input_field">
+                        <label>URL_of_Anchor</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="URL_of_Anchor"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Links_in_tags </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Links_in_tags"required>
+                    </div>
+                    <div class="input_field">
+                        <label>SFH </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="SFH"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Submitting_to_email </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Submitting_to_email"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Abnormal_URL</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Abnormal_URL"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Redirect</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Redirect"required>
+                    </div>
+                    <div class="input_field">
+                        <label>on_mouseover</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="on_mouseover"required>
+                    </div>
+                    <div class="input_field">
+                        <label>RightClick </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="RightClick"required>
+                    </div>
+                    <div class="input_field">
+                        <label>popUpWidnow</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="popUpWidnow"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Iframe</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Iframe"required>
+                    </div>
+                    <div class="input_field">
+                        <label>age_of_domain </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="age_of_domain"required>
+                    </div>
+                    <div class="input_field">
+                        <label>DNSRecord</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="DNSRecord"required>
+                    </div>
+                    <div class="input_field">
+                        <label>web_traffic</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="web_traffic"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Page_Rank</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Page_Rank"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Google_Index </label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Google_Index"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Links_pointing_to_page</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Links_pointing_to_page"required>
+                    </div>
+                    <div class="input_field">
+                        <label>Statistical_report</label>
+                        <input type="text" placeholder="Enter the value" class="input" name="Statistical_report"required>
+                    </div>
+
+                    <center><button type="submit" id="next">SUBMIT</button></center>
+                </div>
+            </form>
+        </div>
+      
+        
+    </head>
+</html>
